@@ -60,7 +60,7 @@ public class profilePage2 extends AppCompatActivity {
 
         for(String header : listDataHeader) {
             SeekBar newSeekBar = new SeekBar(this);
-            newSeekBar.setMax(10);
+            newSeekBar.setMax(7);
             listDataChild.put(header, newSeekBar);
         }
     }
@@ -69,14 +69,15 @@ public class profilePage2 extends AppCompatActivity {
         //List<Integer> choices = new ArrayList<>();
         int[] choices = new int[5];
         for (int x = 0; x < 5; x++){
-            choices[x] = listDataChild.get(x).getProgress();
+            choices[x] = listDataChild.get(listDataHeader.get(x)).getProgress();
         }
 
         String[] selectedActivities = ActivityRecs.GenerateActivities(choices);
 
 
         // load next activity
-        Intent myIntent = new Intent(this, profilePage2.class);
+        Intent myIntent = new Intent(this, ActivitiesPage.class);
+        myIntent.putExtra("Suggestions", selectedActivities);
         startActivity(myIntent);
 
     }
