@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -62,9 +63,9 @@ public class profilePage2 extends AppCompatActivity {
         }
     }
 
-    public void nextClick(View v){
+    public void emotionNextClick(View v){
         SharedPreferences.Editor userPrefEditor = getSharedPreferences("Profile", Context.MODE_PRIVATE).edit();
-        userPrefEditor.putStringSet("Emotions", (Set<String>)listDataHeader);
+        userPrefEditor.putStringSet("Emotions", new HashSet<String>(listDataHeader));
 
         for(String key : listDataHeader){
             userPrefEditor.putInt("Emotion" + key, listDataChild.get(key).getProgress()/10);

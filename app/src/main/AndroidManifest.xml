@@ -15,7 +15,14 @@
         </activity>
         <activity
             android:name=".profilePage2"
-            android:label="Team2">
+            android:label="Team2"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
         <activity
             android:name=".Avatar"
