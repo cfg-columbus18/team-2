@@ -16,6 +16,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -56,6 +57,7 @@ public class profilePage2 extends AppCompatActivity {
         listDataHeader.add("Out of Control");
 
 
+
         for(String header : listDataHeader) {
             SeekBar newSeekBar = new SeekBar(this);
             newSeekBar.setMax(10);
@@ -64,12 +66,14 @@ public class profilePage2 extends AppCompatActivity {
     }
 
     public void emotionNextClick(View v){
-        SharedPreferences.Editor userPrefEditor = getSharedPreferences("Profile", Context.MODE_PRIVATE).edit();
-        userPrefEditor.putStringSet("Emotions", new HashSet<String>(listDataHeader));
-
-        for(String key : listDataHeader){
-            userPrefEditor.putInt("Emotion" + key, listDataChild.get(key).getProgress()/10);
+        //List<Integer> choices = new ArrayList<>();
+        int[] choices = new int[5];
+        for (int x = 0; x < 5; x++){
+            choices[x] = listDataChild.get(x).getProgress();
         }
+
+        String[] selectedActivities = ActivityRecs.GenerateActivities(choices);
+
 
         // load next activity
         Intent myIntent = new Intent(this, profilePage2.class);

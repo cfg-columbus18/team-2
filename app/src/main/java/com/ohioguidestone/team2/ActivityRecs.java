@@ -3,73 +3,70 @@ package com.ohioguidestone.team2;
 import java.util.*;
 import java.util.Random;
 
-public class ActivityRecs
-{
-    public static void main(String[] args)
-    {
-        int [] ans = new int[5];
+public class ActivityRecs {
+    public static String[] GenerateActivities(int[] ans) {
+        //int [] ans = new int[5];
 
         //social
 
         HashMap<Integer, List<String>> arraySocial = new HashMap<>();
 
-        arraySocial.put(0, Arrays.asList(new String[] {"Call someone you care about", "Visit your local library",
+        arraySocial.put(0, Arrays.asList("Call someone you care about", "Visit your local library",
                 "Go to a community event", "Spend time with friends", "Hug someone you're close to",
-                "Reconnect with someone you haven't talked to in a while", "Do something nice for someone"}));
+                "Reconnect with someone you haven't talked to in a while", "Do something nice for someone"));
 
-        arraySocial.put(1, Arrays.asList(new String[] {"Call someone you care about", "Visit your local library",
+        arraySocial.put(1, Arrays.asList("Call someone you care about", "Visit your local library",
                 "Go to a community event", "Spend time with friends", "Hug someone you're close to",
-                "Reconnect with someone you haven't talked to in a while", "Do something nice for someone"}));
+                "Reconnect with someone you haven't talked to in a while", "Do something nice for someone"));
 
-        arraySocial.put(2, Arrays.asList(new String[] {"Call someone you care about", "Do something nice for someone"}));
+        arraySocial.put(2, Arrays.asList("Call someone you care about", "Do something nice for someone"));
 
-        arraySocial.put(3, Arrays.asList(new String[] {"Call someone you care about", "Spend time with friends",
+        arraySocial.put(3, Arrays.asList("Call someone you care about", "Spend time with friends",
                 "Hug someone you're close to", "Reconnect with someone you haven't talked to in a while",
-                "Do something nice for someone"}));
+                "Do something nice for someone"));
 
-        arraySocial.put(4, Arrays.asList(new String[] {"Call someone you care about"}));
+        arraySocial.put(4, Arrays.asList("Call someone you care about"));
 
         //relazationg
 
         HashMap<Integer, List<String>> arrayRelax = new HashMap<>();
 
-        arrayRelax.put(0, Arrays.asList(new String[] {"Meditate", "Listen to music", "Art (open ended)", "Spend time outside",
-                "Write in your journal", "Take a deep breath", "Tidy up your living space"}));
+        arrayRelax.put(0, Arrays.asList("Meditate", "Listen to music", "Art (open ended)", "Spend time outside",
+                "Write in your journal", "Take a deep breath", "Tidy up your living space"));
 
-        arrayRelax.put(1, Arrays.asList(new String[] {"Meditate", "Listen to music", "Art (open ended)", "Spend time outside",
-                "Write in your journal", "Take a deep breath"}));
+        arrayRelax.put(1, Arrays.asList("Meditate", "Listen to music", "Art (open ended)", "Spend time outside",
+                "Write in your journal", "Take a deep breath"));
 
-        arrayRelax.put(2, Arrays.asList(new String[] {"Meditate", "Listen to music", "Art (open ended)",
-                "Write in your journal", "Take a deep breath"}));
+        arrayRelax.put(2, Arrays.asList("Meditate", "Listen to music", "Art (open ended)",
+                "Write in your journal", "Take a deep breath"));
 
-        arrayRelax.put(3, Arrays.asList(new String[] {"Meditate", "Listen to music", "Art (open ended)", "Spend time outside",
-                "Write in your journal", "Take a deep breath", "Tidy up your living space"}));
+        arrayRelax.put(3, Arrays.asList("Meditate", "Listen to music", "Art (open ended)", "Spend time outside",
+                "Write in your journal", "Take a deep breath", "Tidy up your living space"));
 
-        arrayRelax.put(4, Arrays.asList(new String[] {"Meditate", "Listen to music", "Art (open ended)",
-                "Write in your journal", "Take a deep breath"}));
+        arrayRelax.put(4, Arrays.asList("Meditate", "Listen to music", "Art (open ended)",
+                "Write in your journal", "Take a deep breath"));
 
 
         //beHuman
 
         HashMap<Integer, List<String>> arrayHuman = new HashMap<>();
 
-        arrayHuman.put(0, Arrays.asList(new String[] {"Go for a walk", "Eat a fruit", "Take a nap",
-                "Drink a cup of water", "Eat a balanced meal", "Take a shower", "Play a sport"}));
+        arrayHuman.put(0, Arrays.asList("Go for a walk", "Eat a fruit", "Take a nap",
+                "Drink a cup of water", "Eat a balanced meal", "Take a shower", "Play a sport"));
 
-        arrayHuman.put(1, Arrays.asList(new String[] {"Go for a walk", "Eat a fruit", "Take a nap",
-                "Drink a cup of water", "Eat a balanced meal", "Take a shower", "Play a sport"}));
+        arrayHuman.put(1, Arrays.asList("Go for a walk", "Eat a fruit", "Take a nap",
+                "Drink a cup of water", "Eat a balanced meal", "Take a shower", "Play a sport"));
 
-        arrayHuman.put(2, Arrays.asList(new String[] {"Eat a fruit", "Take a nap",
-                "Drink a cup of water", "Eat a balanced meal", "Take a shower"}));
+        arrayHuman.put(2, Arrays.asList("Eat a fruit", "Take a nap",
+                "Drink a cup of water", "Eat a balanced meal", "Take a shower"));
 
-        arrayHuman.put(3, Arrays.asList(new String[] {"Go for a walk", "Eat a fruit", "Take a nap",
-                "Drink a cup of water", "Eat a balanced meal", "Take a shower"}));
+        arrayHuman.put(3, Arrays.asList("Go for a walk", "Eat a fruit", "Take a nap",
+                "Drink a cup of water", "Eat a balanced meal", "Take a shower"));
 
-        arrayHuman.put(4, Arrays.asList(new String[] {"Eat a fruit", "Take a nap",
-                "Drink a cup of water", "Eat a balanced meal"}));
+        arrayHuman.put(4, Arrays.asList("Eat a fruit", "Take a nap",
+                "Drink a cup of water", "Eat a balanced meal"));
 
-        int returnedVal[];
-        returnedVal = findMax(ans);
+        int returnedVal[] = findMax(ans);
 
         List<String> socialActivity = arraySocial.get(returnedVal[0]);
         List<String> relaxActivity = arrayRelax.get(returnedVal[1]);
@@ -85,43 +82,30 @@ public class ActivityRecs
 
         String [] r = new String [2];
 
-
-
-        if (n == 1)
-        {
+        if (n == 1) {
             r[0] = social1;
             r[1] = relax1;
-        }
-        else if (n == 2)
-        {
+        } else if (n == 2) {
             r[0] = social1;
             r[1] = human1;
-        }
-        else
-        {
+        } else {
             r[0] = human1;
             r[1] = relax1;
         }
 
-        System.out.println(r[0]);
-        System.out.println(r[1]);
-
-
+        return r;
     }
 
 
-    public static int[] findMax(int[] arr)
-    {
+    private static int[] findMax(int[] arr) {
         int first = 0;
         int second = 0;
         int third = 0;
 
-        for (int i = 0; i < 5 ; i ++)
-        {
+        for (int i = 0; i < 5 ; i ++) {
         /* If current element is smaller than
         first*/
-            if (arr[i] > first)
-            {
+            if (arr[i] > first) {
                 third = second;
                 second = first;
                 first = arr[i];
@@ -129,23 +113,19 @@ public class ActivityRecs
 
         /* If arr[i] is in between first and
         second then update second  */
-            else if (arr[i] > second)
-            {
+            else if (arr[i] > second) {
                 third = second;
                 second = arr[i];
-            }
-
-            else if (arr[i] > third)
+            } else if (arr[i] > third)
                 third = arr[i];
         }
 
         int returnValue[] = new int [3];
         returnValue[0] = first;
-        returnValue[0] = second;
-        returnValue[0] = third;
+        returnValue[1] = second;
+        returnValue[2] = third;
 
         return returnValue;
-
 
     }
 

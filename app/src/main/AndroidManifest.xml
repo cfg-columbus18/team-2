@@ -10,10 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity
             android:name=".profilePage2"
             android:label="Team2"
             android:theme="@style/AppTheme.NoActionBar">
