@@ -1,5 +1,6 @@
 package com.ohioguidestone.team2;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -47,6 +48,8 @@ public class ActivitiesPage extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
             myViewHolder.text.setText(Suggestions[i]);
+            //myViewHolder.image.setImageBitmap(new BitMap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_apple2)));
+            myViewHolder.image.setImageDrawable(getResources().getDrawable(R.drawable.ic_apple2));
         }
 
         @Override

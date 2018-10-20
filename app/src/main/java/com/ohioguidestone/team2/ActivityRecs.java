@@ -67,7 +67,11 @@ public class ActivityRecs {
                 "Drink a cup of water", "Eat a balanced meal"}));
 
         int returnedVal[] = findMax(ans);
+        returnedVal[0] = 1;
+        returnedVal[1] = 2;
+        returnedVal[2] = 3;
         System.out.println(Arrays.toString(returnedVal));
+
         List<String> socialActivity = arraySocial.get(returnedVal[0]);
         List<String> relaxActivity = arrayRelax.get(returnedVal[1]);
         List<String> humanActivity = arrayHuman.get(returnedVal[2]);
