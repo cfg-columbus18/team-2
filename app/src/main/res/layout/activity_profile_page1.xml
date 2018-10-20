@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/earth1" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageButton4"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/air1" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -88,6 +88,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/fire1" />
 
 </android.support.constraint.ConstraintLayout>
