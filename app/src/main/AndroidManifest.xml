@@ -15,12 +15,17 @@
 
         </activity>
         <activity
+            android:name=".profilePage2"
+            android:label="Team2">
+        </activity>
+        <activity android:name=".profilePage1" android:label="Team2">
+        </activity>
+        <activity
             android:name=".Profile"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
