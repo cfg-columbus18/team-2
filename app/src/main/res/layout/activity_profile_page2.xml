@@ -10,6 +10,19 @@
     <ExpandableListView
         android:id="@+id/emotion"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ExpandableListView>
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ExpandableListView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="327dp"
+        android:layout_height="33dp"
+        android:text="Right now, I'm feeling..."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="15dp" />
 
 </android.support.constraint.ConstraintLayout>
