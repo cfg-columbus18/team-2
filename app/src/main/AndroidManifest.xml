@@ -12,18 +12,15 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
-
         </activity>
         <activity
             android:name=".profilePage2"
             android:label="Team2">
         </activity>
-        <activity android:name=".profilePage1" android:label="Team2">
-        </activity>
         <activity
-            android:name=".Profile"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".Avatar"
+            android:label="@string/title_activity_avatar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -1,14 +1,24 @@
 package com.ohioguidestone.team2;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.SeekBar;
 import android.util.*;
+import android.widget.TableLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class profilePage2 extends AppCompatActivity {
 
@@ -44,121 +54,25 @@ public class profilePage2 extends AppCompatActivity {
         listDataHeader.add("Anxious");
         listDataHeader.add("Out of Control");
 
-        // Adding child data
-        SeekBar happy = new SeekBar(this);
-        happy.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
+        for(String header : listDataHeader) {
+            SeekBar newSeekBar = new SeekBar(this);
+            newSeekBar.setMax(10);
+            listDataChild.put(header, newSeekBar);
+        }
+    }
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
+    public void nextClick(View v){
+        SharedPreferences.Editor userPrefEditor = getSharedPreferences("Profile", Context.MODE_PRIVATE).edit();
+        userPrefEditor.putStringSet("Emotions", (Set<String>)listDataHeader);
 
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-                values[0] = (progress/10);
-            }
-        });
+        for(String key : listDataHeader){
+            userPrefEditor.putInt("Emotion" + key, listDataChild.get(key).getProgress()/10);
+        }
 
+        // load next activity
+        Intent myIntent = new Intent(this, profilePage2.class);
+        startActivity(myIntent);
 
-        SeekBar sad = new SeekBar(this);
-        //List<SeekBar> sad = new ArrayList<SeekBar>();
-        //sad.add((SeekBar)findViewById(R.id.seekBar));
-        sad.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-                values[1] = (progress/10);
-            }
-        });
-
-        SeekBar impulsive = new SeekBar(this);
-        //List<SeekBar> impulsive = new ArrayList<SeekBar>();
-        //impulsive.add((SeekBar)findViewById(R.id.seekBar));
-        impulsive.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-                values[2] = (progress/10);
-            }
-        });
-
-        SeekBar anxious = new SeekBar(this);
-        //List<SeekBar> anxious = new ArrayList<SeekBar>();
-        //anxious.add((SeekBar)findViewById(R.id.seekBar));
-        happy.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-                values[3] = (progress/10);
-            }
-        });
-
-        SeekBar control = new SeekBar(this);
-        //List<SeekBar> control = new ArrayList<SeekBar>();
-        //control.add((SeekBar)findViewById(R.id.seekBar));
-        happy.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-                values[4] = (progress/10);
-            }
-        });
-
-
-        listDataChild.put(listDataHeader.get(0), happy); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), sad);
-        listDataChild.put(listDataHeader.get(2), impulsive);
-        listDataChild.put(listDataHeader.get(3), anxious);
-        listDataChild.put(listDataHeader.get(4), control);
     }
 }

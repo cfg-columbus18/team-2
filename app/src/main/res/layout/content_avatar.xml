@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/textBoxName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="Name..."
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:text="Select an Avatar"
+        android:textSize="24sp"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/water1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/water1" />
+
+                <ImageButton
+                    android:id="@+id/water2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/water2" />
+
+                <ImageButton
+                    android:id="@+id/water3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/water3" />
+
+                <ImageButton
+                    android:id="@+id/water4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/water4" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/earth4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/earth4" />
+
+                <ImageButton
+                    android:id="@+id/earth2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/earth2" />
+
+                <ImageButton
+                    android:id="@+id/earth1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/earth1" />
+
+                <ImageButton
+                    android:id="@+id/earth3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/earth3" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/air1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/air1" />
+
+                <ImageButton
+                    android:id="@+id/air2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/air2" />
+
+                <ImageButton
+                    android:id="@+id/air3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/air3" />
+
+                <ImageButton
+                    android:id="@+id/air4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/air4" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/fire1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/fire1" />
+
+                <ImageButton
+                    android:id="@+id/fire2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/fire2" />
+
+                <ImageButton
+                    android:id="@+id/fire3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/fire3" />
+
+                <ImageButton
+                    android:id="@+id/fire4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="75dp"
+                    android:minWidth="75dp"
+                    android:onClick="buttonClicked"
+                    app:srcCompat="@drawable/fire4" />
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
