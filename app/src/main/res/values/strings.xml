@@ -5,4 +5,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_avatar">Avatar</string>
+    <string name="title_activity_activities_page">ActivitiesPage</string>
+    <string name="title_activity_activities_completed">ActivitiesCompleted</string>
+    <string name="title_activity_home_page">HomePage</string>
 </resources>
