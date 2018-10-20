@@ -48,7 +48,7 @@ public class Profile extends AppCompatActivity {
 
 
         // load next activity
-        Intent intent = new Intent(Profile.this, MainActivity.class);
+        Intent intent = new Intent(Profile.this, profilePage2.class);
         startActivity(intent);
     }
 
